@@ -1,0 +1,27 @@
+package com.spring.services;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.spring.models.Product;
+import com.spring.repositories.ProductRepository;
+
+@Service
+public class ProductService { 
+	
+	
+	private ProductRepository repo;
+	
+	public ProductService(ProductRepository repo) {
+		this.repo = repo;
+	}
+
+	public List<Product> getProducts() {
+        List<Product> products = repo.findAll();
+        System.out.println("Products: " + products);
+        return products;
+    }
+
+}

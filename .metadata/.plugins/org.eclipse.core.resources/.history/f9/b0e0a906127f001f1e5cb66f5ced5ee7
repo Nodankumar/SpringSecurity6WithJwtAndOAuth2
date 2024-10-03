@@ -1,0 +1,14 @@
+package com.springsecurity.services;
+
+import com.springsecurity.model.Users;
+
+public class UserService {
+	
+	private UserRepo repo;
+
+	public Users register(Users user) {
+		
+		return repo.save(user);
+	}
+
+}

@@ -1,0 +1,4 @@
+spring.application.name=SpringSecurityAuth
+
+spring.security.user.name=nodan
+spring.security.user.password=Nodan

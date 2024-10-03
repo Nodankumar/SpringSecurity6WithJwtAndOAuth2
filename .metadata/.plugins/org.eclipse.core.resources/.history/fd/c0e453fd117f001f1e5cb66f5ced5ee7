@@ -1,0 +1,5 @@
+package com.springsecurity.services;
+
+public class UserService {
+
+}

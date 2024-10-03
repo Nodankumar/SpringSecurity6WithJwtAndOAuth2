@@ -1,0 +1,27 @@
+package com.springsecurity.services;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import org.springframework.stereotype.Service;
+
+import com.springsecurity.model.Users;
+
+import io.jsonwebtoken.Jwts;
+
+@Service
+public class JwtService {
+	
+	
+
+	public String generateToken(Users user) {
+		
+		Map<String, Object> claims = new HashMap<String, Object>();
+		
+		return Jwts.builder()
+				.claims()
+				.add(claims)
+				.subject();	
+	}
+
+}

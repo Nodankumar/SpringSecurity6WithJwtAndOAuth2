@@ -1,0 +1,20 @@
+package com.spring.services;
+
+import org.springframework.stereotype.Service;
+
+import com.spring.repositories.ProductRepository;
+
+@Service
+public class ProductService { 
+	
+	private ProductRepository repo;
+	
+	public ProductService(ProductRepository repo) {
+		this.repo = repo;
+	}
+
+	public void getProducts() {
+		
+	}
+
+}

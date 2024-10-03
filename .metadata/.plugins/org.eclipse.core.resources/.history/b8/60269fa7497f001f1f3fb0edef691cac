@@ -1,0 +1,13 @@
+package com.springsecurity.services;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class jwtService {
+
+	public static void generateToken() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

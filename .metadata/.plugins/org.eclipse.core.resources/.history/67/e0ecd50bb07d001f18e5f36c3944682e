@@ -1,0 +1,33 @@
+package com.spring.services;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
+
+import com.spring.models.Product;
+import com.spring.repositories.ProductRepository;
+
+@Service
+public class ProductService { 
+	
+	
+	private ProductRepository repo;
+	
+	public ProductService(ProductRepository repo) {
+		this.repo = repo;
+	}
+
+	public ResponseEntity<List<Product>> getProducts() {
+      return new ResponseEntity<List<Product>>(repo.findAll(), HttpStatus.OK);
+        
+    }
+
+	public Product getProductById(int id) {
+		Optional<Product> product = repo.findById(id);
+		return product.orElse(null);
+	}
+
+}

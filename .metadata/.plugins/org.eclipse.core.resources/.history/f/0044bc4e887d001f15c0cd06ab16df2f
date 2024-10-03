@@ -1,0 +1,23 @@
+package com.spring.services;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.spring.models.Product;
+import com.spring.repositories.ProductRepository;
+
+@Service
+public class ProductService { 
+	
+	private ProductRepository repo;
+	
+	public ProductService(ProductRepository repo) {
+		this.repo = repo;
+	}
+
+	public List<Product> getProducts() {
+		return repo.findAll();
+	}
+
+}

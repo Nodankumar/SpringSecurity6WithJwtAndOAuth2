@@ -1,0 +1,2 @@
+INSERT INTO product (available, brand, category, description, name, price, quantity, release_date)
+VALUES (1, 'BrandName', 'CategoryName', 'This is a sample product description.', 'Sample Product', 19.99, 100, '2024-09-28 10:22:46');

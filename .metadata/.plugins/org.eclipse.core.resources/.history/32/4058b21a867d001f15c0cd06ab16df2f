@@ -1,0 +1,10 @@
+spring.application.name=EcomDemo
+
+spring.datasource.url=jdbc:mysql://localhost:3306/ecom
+spring.datasource.username=root
+spring.datasource.password=Nodan7253@?
+
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+
+spring.jpa.defer-datasource-initialization=true
